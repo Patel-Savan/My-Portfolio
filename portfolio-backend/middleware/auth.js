@@ -5,10 +5,12 @@ const auth = (req, res, next) => {
   if (!token) return res.status(401).json({ message: 'No token, authorization denied' });
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.admin = decoded; // Attach admin data to the request
+    const jwtToken = token.split(' ')[1];
+    const decoded = jwt.verify(jwtToken, process.env.JWT_SECRET);
+    req.admin = decoded; 
     next();
   } catch (err) {
+    console.log(err.message);
     res.status(401).json({ message: 'Invalid token' });
   }
 };

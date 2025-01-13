@@ -10,7 +10,7 @@ const ProjectSchema = new mongoose.Schema({
     required: true,
   },
   techStack: {
-    type: [String], // Array of strings
+    type: [String], 
     required: true,
   },
   liveLink: {
