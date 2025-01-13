@@ -1,12 +1,15 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
+
 import Admin from '../models/Admin.js';
+import { adminSchema } from '../validators/adminValidator.js';
+import validate from '../middleware/validate.js';
 
 const router = express.Router();
 
 // Admin login
-router.post('/login', async (req, res) => {
+router.post('/login', validate(adminSchema),  async (req, res) => {
   const { username, password } = req.body;
 
   try {

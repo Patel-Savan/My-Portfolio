@@ -1,6 +1,9 @@
 import express from 'express';
+
 import Project from '../models/Project.js';
 import auth from '../middleware/auth.js';
+import { projectSchema } from '../validators/projectValiator.js';
+import validate from '../middleware/validate.js';
 
 const router = express.Router();
 
@@ -13,7 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.post('/', auth, async (req, res) => {
+router.post('/', validate(projectSchema), auth, async (req, res) => {
   try {
     const newProject = new Project(req.body);
     const savedProject = await newProject.save();
