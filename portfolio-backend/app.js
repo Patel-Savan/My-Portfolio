@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 
 import projectsRoute from './routes/projects.js';
 import authRoute from './routes/auth.js';
+import experienceRoute from './routes/experience.js';
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authRoute);
 app.use('/projects', projectsRoute);
+app.use('/experience', experienceRoute );
 
 app.use((req, res, next) => {
   res.status(404).json({ error: 'Route not found' });
