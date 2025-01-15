@@ -3,13 +3,13 @@ import mongoose from "mongoose";
 const SkillSchema = new mongoose.Schema({
     name : {
         type : String,
-        required: True
+        required: true
     },
     proficiency: {
-        type: number,
-        required: True
+        type : Number,
+        required: true
     }
 })
 
-const Skill = mongoose.Model('Skill', SkillSchema);
+const Skill = mongoose.model('Skill', SkillSchema);
 export default Skill;
