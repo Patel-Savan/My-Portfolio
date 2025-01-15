@@ -5,5 +5,5 @@ export const experienceSchema = Joi.object({
   role: Joi.string().required(),
   startDate: Joi.date().required(),
   endDate: Joi.date().optional(),
-  description: Joi.string().min(10).max(500).required(),
+  description: Joi.string().min(10).required(),
 });
