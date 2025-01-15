@@ -1,4 +1,3 @@
-// models/WorkExperience.js
 import mongoose from 'mongoose';
 
 const ExperienceSchema = new mongoose.Schema({

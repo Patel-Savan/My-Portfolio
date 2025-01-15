@@ -17,16 +17,9 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', auth, validate(experienceSchema),  async (req, res) => {
-  const { companyName, role, startDate, endDate, description } = req.body;
-  
+
   try {
-    const newExperience = new Experience({
-      companyName,
-      role,
-      startDate,
-      endDate,
-      description
-    });
+    const newExperience = new Experience(req.body);
     const savedExperience = await newExperience.save();
     res.status(201).json(savedExperience);
   } catch (err) {
@@ -35,17 +28,20 @@ router.post('/', auth, validate(experienceSchema),  async (req, res) => {
 });
 
 router.put('/:id', auth, async (req, res) => {
+  const {companyName, role, startDate, endDate, description, } = req.body;
   try {
     const experience = await Experience.findById(req.params.id);
     if (!experience) {
       return res.status(404).json({ message: 'Work experience not found' });
     }
 
-    const updatedExperience = await Experience.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    );
+    if (companyName) experience.companyName = companyName;
+    if (description) experience.description = description;
+    if (role) experience.role = role;
+    if (startDate) experience.startDate = startDate;
+    if (endDate) experience.endDate = endDate;
+
+    const updatedExperience = await experience.save();
     res.json(updatedExperience);
   } catch (err) {
     res.status(400).json({ message: 'Error updating work experience', error: err.message });
