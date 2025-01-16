@@ -1,1 +1,29 @@
-<p>navbar works!</p>
+<header>
+  <div class="header">
+    <nav>
+
+      <span routerLink="/">{{ title() }}</span>
+
+      <button mat-icon-button *ngIf="isMobile" (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <ul *ngIf="!isMobile" class="desktop-menu">
+        <li routerLink="/">Home</li>
+        <li routerLink="/about">About</li>
+        <li routerLink="/experience">Experience</li>
+        <li routerLink="/projects">Projects</li>
+        <li routerLink="/contact">Contact</li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    <ul *ngIf="isMobile" class="mobile-menu" [class.open]="menuOpened">
+      <li routerLink="/">Home</li>
+      <li routerLink="/about">About</li>
+      <li routerLink="/experience">Experience</li>
+      <li routerLink="/projects">Projects</li>
+      <li routerLink="/contact">Contact</li>
+    </ul>
+  </div>
+</header>

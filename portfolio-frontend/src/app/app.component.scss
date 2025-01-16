@@ -1,0 +1,13 @@
+@media screen and (min-width: 768px) {
+  .content {
+    padding-top: 64px;
+    transition: padding-top 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-content {
+    padding-top: 20%;
+    transition: padding-top 0.3s ease;
+  }
+}
