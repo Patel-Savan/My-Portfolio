@@ -59,4 +59,12 @@ export class NavbarComponent implements OnInit {
       this.rendered.addClass(contentDiv, 'mobile-content');
     }
   }
+
+  scrollToSection(event: Event, sectionId: string) {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
