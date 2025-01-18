@@ -11,8 +11,8 @@
       <ul *ngIf="!isMobile" class="desktop-menu">
         <li><a href="#home" (click)="scrollToSection($event, 'home')">Home</a></li>
         <li><a href="#about" (click)="scrollToSection($event, 'about')">About</a></li>
-        <li><a href="#experience" (click)="scrollToSection($event, 'experience')">Experience</a></li>
         <li><a href="#project" (click)="scrollToSection($event, 'project')">Project</a></li>
+        <li><a href="#experience" (click)="scrollToSection($event, 'experience')">Experience</a></li>
         <li><a href="#contact" (click)="scrollToSection($event, 'contact')">Contacts</a></li>
       </ul>
     </nav>
@@ -21,8 +21,8 @@
     <ul *ngIf="isMobile" class="mobile-menu" [class.open]="menuOpened">
       <li><a href="#home" (click)="scrollToSection($event, 'home')">Home</a></li>
       <li><a href="#about" (click)="scrollToSection($event, 'about')">About</a></li>
-      <li><a href="#experience" (click)="scrollToSection($event, 'experience')">Experience</a></li>
       <li><a href="#project" (click)="scrollToSection($event, 'project')">Project</a></li>
+      <li><a href="#experience" (click)="scrollToSection($event, 'experience')">Experience</a></li>
       <li><a href="#contact" (click)="scrollToSection($event, 'contact')">Contacts</a></li>
     </ul>
   </div>

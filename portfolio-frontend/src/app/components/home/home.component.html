@@ -1,2 +1,35 @@
-<h1>Welcome to My Portfolio</h1>
-<p>This is the introduction section of your portfolio.</p>
+<section id="home" class="home-section">
+  <div class="home-content">
+    <div class="text-content">
+      <h1>Hello, I'm <span class="highlight">Savan Patel</span></h1>
+      <h2>
+        <span class="highlight">{{ currentProfession }}</span>
+      </h2>
+      <p>
+        A motivated and passionate individual with a strong background in Full Stack Development and Cloud Technologies, eager to use utilize my skills for building impactful solutions.
+      </p>
+      <div class="button-section">
+        <div class="cta-buttons">
+          <a
+            href="#project"
+            class="btn btn-primary"
+            (click)="scrollToSection($event, 'project')"
+            >View My Projects</a
+          >
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+            (click)="scrollToSection($event, 'contact')"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="image-content">
+      <img
+        src="assets/my-picture.jpg"
+        alt="Savan Patel"
+      />
+    </div>
+  </div>
+</section>

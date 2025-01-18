@@ -1,7 +1,6 @@
 .section {
-  padding: 100px 20px;
   height: 100vh; 
-  scroll-margin-top: 80px; 
+  scroll-margin-top: 90px; 
 }
 
 #home {
@@ -26,6 +25,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .section {
+      height: 100vh; 
+      scroll-margin-top: 70px; 
+    }    
   .content {
     padding-top: 64px;
     transition: padding-top 0.3s ease;
@@ -33,6 +36,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .section {
+    height: 100vh; 
+    scroll-margin-top: 90px; 
+  }
+  
   .mobile-content {
     padding-top: 20%;
     transition: padding-top 0.3s ease;
