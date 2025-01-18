@@ -5,8 +5,8 @@ const SkillSchema = new mongoose.Schema({
         type : String,
         required: true
     },
-    proficiency: {
-        type : Number,
+    category: {
+        type : String,
         required: true
     }
 })

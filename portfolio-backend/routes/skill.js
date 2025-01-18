@@ -27,7 +27,7 @@ router.post("/", auth, validate(skillSchema), async (req, res) => {
 });
 
 router.put("/:id", auth, async (req, res) => {
-  const { name, proficiency } = req.body;
+  const { name, category } = req.body;
   try {
     const skill = await Skill.findById(req.params.id);
     if (!skill) {
