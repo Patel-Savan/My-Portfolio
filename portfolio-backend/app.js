@@ -31,10 +31,10 @@ app.get('/', (req, res) => {
   res.send('Backend is running!');
 });
 
-app.use('/auth', authRoute);
-app.use('/projects', projectsRoute);
-app.use('/experience', experienceRoute );
-app.use('/skill', skillRoute);
+app.use('/api/auth', authRoute);
+app.use('/api/projects', projectsRoute);
+app.use('/api/experience', experienceRoute );
+app.use('/api/skill', skillRoute);
 
 app.use((req, res, next) => {
   res.status(404).json({ error: 'Route not found' });
