@@ -1,0 +1,192 @@
+.about-section {
+  padding: 50px 20px;
+  background: #1a1a1a;
+  color: #f4f4f4;
+
+  .about-content {
+    width: 100%;
+    padding-bottom: 20px;
+    margin: auto;
+
+    h2 {
+      font-size: 2rem;
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 20px;
+
+      .summary-box {
+        flex: 1 1 50%;
+        padding: 20px;
+        background: #292929;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+        p {
+          font-size: 1.2rem;
+          line-height: 1.6;
+          text-align: justify;
+        }
+      }
+
+      .timeline {
+        flex: 1 1 40%;
+        padding: 20px;
+        background: #292929;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        max-height: 400px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #ffcc00;
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: #e6b800;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: #333;
+          border-radius: 10px;
+        }
+
+        .timeline-event {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .timeline-dot {
+            width: 10px;
+            height: 10px;
+            background: #ffcc00;
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
+          }
+
+          .timeline-description {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #f4f4f4;
+          }
+        }
+      }
+    }
+
+    .skills {
+      flex: 1 1 100%;
+      margin-bottom: 30px;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #ffcc00;
+        margin-bottom: 10px;
+      }
+
+      .skills-category {
+        margin-bottom: 20px;
+
+        h4 {
+          font-size: 1rem;
+          color: #ffcc00;
+        }
+
+        ul {
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          padding: 0;
+
+          li {
+            flex: 0 1 auto;
+            padding: 5px 10px;
+            background: #333;
+            border-radius: 5px;
+            font-size: 1rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .education {
+      flex: 1 1 100%;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #ffcc00;
+        margin-bottom: 10px;
+      }
+
+      .education-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+
+      .timeline {
+        margin-bottom: 20px;
+      }
+    }
+
+    .summary-box {
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .skills h3,
+    .education h3 {
+      font-size: 1.3rem;
+    }
+
+    .skills ul li {
+      font-size: 0.9rem;
+      padding: 5px 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .summary-box p {
+      font-size: 0.9rem;
+    }
+
+    .timeline {
+      .timeline-description {
+        font-size: 0.9rem;
+      }
+    }
+
+    .skills ul li {
+      font-size: 0.8rem;
+      padding: 5px;
+    }
+  }
+}

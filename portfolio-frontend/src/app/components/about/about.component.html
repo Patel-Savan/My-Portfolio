@@ -1,2 +1,56 @@
-<h2>About</h2>
-<p>This is about Savan Patel</p>
+<section id="about" class="about-section">
+  <div class="about-content">
+    <h2>About Me</h2>
+    <div class="content-wrapper">
+
+      <div class="summary-box">
+        <p>
+          Hello, My name is Savan Patel, a Master's student in Applied Computer Science
+          at Dalhousie University with a Bachelor's in Computer Engineering. I
+          have hands-on experience in frameworks like React, Node.js, and Spring
+          Boot, coupled with expertise in cloud technologies such as AWS.
+          Through internships and academic projects, I have developed a passion
+          for building innovative solutions and adapting to new technologies.
+          I'm eager to apply my skills to impactful projects and collaborate
+          with forward-thinking teams.
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-event" *ngFor="let event of timeline">
+          <div class="timeline-dot"></div>
+          <div class="timeline-description">
+            <strong>{{ event.year }}</strong>: {{ event.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills">
+      <h3>My Skills</h3>
+      <div
+        class="skills-category"
+        *ngFor="let category of groupedSkills | keyvalue : sortSkills"
+      >
+        <h4>{{ category.key }}</h4>
+        <ul>
+          <li *ngFor="let skill of category.value">{{ skill }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="education">
+      <h3>Education</h3>
+      <div class="education-cards">
+        <app-education
+          *ngFor="let edu of educationList"
+          [degree]="edu.degree"
+          [institution]="edu.institution"
+          [year]="edu.year"
+          [grade]="edu.grade"
+          [location]="edu.location"
+        >
+        </app-education>
+      </div>
+    </div>
+  </div>
+</section>
