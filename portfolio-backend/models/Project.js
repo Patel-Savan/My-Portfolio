@@ -1,3 +1,4 @@
+import { required } from 'joi';
 import mongoose from 'mongoose';
 
 const ProjectSchema = new mongoose.Schema({
@@ -20,6 +21,10 @@ const ProjectSchema = new mongoose.Schema({
   repoLink: {
     type: String,
     required: true,
+  },
+  image: {
+    type: String,
+    required: false
   },
   createdAt: {
     type: Date,

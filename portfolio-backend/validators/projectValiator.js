@@ -6,4 +6,5 @@ export const projectSchema = Joi.object({
   techStack: Joi.array().items(Joi.string().min(1)).required(),
   liveLink: Joi.string().uri().optional(),
   repoLink: Joi.string().uri().required(),
+  image: Joi.string().optional()
 });

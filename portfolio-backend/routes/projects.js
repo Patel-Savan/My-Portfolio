@@ -27,7 +27,7 @@ router.post('/', validate(projectSchema), auth, async (req, res) => {
 });
 
 router.put('/:id', auth, async (req, res) => {
-  const { title, description, techStack, liveLink, repoLink } = req.body;
+  const { title, description, techStack, liveLink, repoLink, image } = req.body;
 
   try {
     const project = await Project.findById(req.params.id);
@@ -40,6 +40,7 @@ router.put('/:id', auth, async (req, res) => {
     if (techStack) project.techStack = techStack;
     if (liveLink) project.liveLink = liveLink;
     if (repoLink) project.repoLink = repoLink;
+    if(image) project.image = image;
 
     const updatedProject = await project.save();
     res.json(updatedProject);
