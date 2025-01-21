@@ -1,4 +1,3 @@
-import { required } from 'joi';
 import mongoose from 'mongoose';
 
 const ProjectSchema = new mongoose.Schema({
