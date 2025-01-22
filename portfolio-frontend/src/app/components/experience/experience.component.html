@@ -1,2 +1,14 @@
-<h2>Experience</h2>
-<p>Describe your work experience here.</p>
+<section id="experience" class="experience-section">
+    <h2>Experience</h2>
+    <div class="experience-timeline">
+      <app-experience-card
+        *ngFor="let experience of experiences"
+        [title]="experience.title"
+        [timePeriod]="experience.timePeriod"
+        [company]="experience.company"
+        [location]="experience.location"
+        [responsibilities]="experience.responsibilities"
+      ></app-experience-card>
+    </div>
+  </section>
+  

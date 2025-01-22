@@ -1,0 +1,101 @@
+.experience-section {
+  padding: 50px 20px;
+  background: #1a1a1a;
+  color: #f4f4f4;
+
+  h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .experience-card {
+      background: #292929;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      position: relative;
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+
+        h3 {
+          font-size: 1.5rem;
+          color: #ffcc00;
+          margin: 0;
+        }
+
+        .time-period {
+          font-size: 1rem;
+          color: #cccccc;
+        }
+      }
+
+      .company {
+        font-size: 1.2rem;
+        color: #cccccc;
+        margin-bottom: 5px; /* Small gap between company and location */
+      }
+
+      .location {
+        font-size: 1rem;
+        color: #aaaaaa;
+        margin-bottom: 10px;
+      }
+
+      .responsibilities {
+        list-style: disc; /* Changed to bullet points */
+        padding-left: 20px; /* Added some padding for bullets */
+        margin-top: 10px;
+        li {
+          font-size: 1rem;
+          line-height: 1.5;
+          margin-bottom: 5px; /* Reduced spacing between items */
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .experience-card {
+      .card-header {
+        h3 {
+          font-size: 1rem;
+        }
+
+        .time-period {
+          font-size: 0.7rem;
+        }
+      }
+
+      .company {
+        font-size: 1rem;
+      }
+
+      .location {
+        font-size: 0.9rem;
+      }
+
+      .responsibilities li {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
