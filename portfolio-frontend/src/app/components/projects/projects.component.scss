@@ -31,19 +31,24 @@
 
   .view-all-button {
     display: flex;
+    gap: 6px;
+    font-weight: bold;
     background: #ffcc00;
     color: #1a1a1a;
-    border: none;
+    border: 2px solid #ffcc00;
     padding: 10px 20px;
+    background: linear-gradient(45deg, #ffcc00, #ffa500);
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     margin-left: 2%;
 
     &:hover {
-      background: #e6b800;
+      background: linear-gradient(45deg, #ffa500, #ff9900);
       transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
     }
 
     @media (max-width: 768px) {
