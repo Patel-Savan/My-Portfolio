@@ -1,24 +1,24 @@
 import mongoose from 'mongoose';
 
 const ExperienceSchema = new mongoose.Schema({
-  companyName: {
+  title: {
     type: String,
     required: true,
   },
-  role: {
+  company: {
     type: String,
     required: true,
   },
-  startDate: {
-    type: Date,
+  timePeriod: {
+    type: String,
     required: true,
   },
-  endDate: {
-    type: Date,
-    required: false,
-  },
-  description: {
+  location: {
     type: String,
+    required: true,
+  },
+  responsibilities: {
+    type: [String],
     required: true,
   },
 });

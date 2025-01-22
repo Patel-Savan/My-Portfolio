@@ -1,9 +1,9 @@
 import Joi from 'joi';
 
 export const experienceSchema = Joi.object({
-  companyName: Joi.string().required(),
-  role: Joi.string().required(),
-  startDate: Joi.date().required(),
-  endDate: Joi.date().optional(),
-  description: Joi.string().min(10).required(),
+  title: Joi.string().required(),
+  company: Joi.string().required(),
+  timePeriod: Joi.string().required(),
+  location: Joi.string().required(),
+  responsibilities: Joi.array().items(Joi.string().min(1)).required(),
 });

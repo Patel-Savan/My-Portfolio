@@ -28,18 +28,18 @@ router.post('/', auth, validate(experienceSchema),  async (req, res) => {
 });
 
 router.put('/:id', auth, async (req, res) => {
-  const {companyName, role, startDate, endDate, description, } = req.body;
+  const {title, company, timePeriod, location, responsibilities } = req.body;
   try {
     const experience = await Experience.findById(req.params.id);
     if (!experience) {
       return res.status(404).json({ message: 'Work experience not found' });
     }
 
-    if (companyName) experience.companyName = companyName;
-    if (description) experience.description = description;
-    if (role) experience.role = role;
-    if (startDate) experience.startDate = startDate;
-    if (endDate) experience.endDate = endDate;
+    if (company) experience.company = company;
+    if (title) experience.title = title;
+    if (timePeriod) experience.timePeriod = timePeriod;
+    if (location) experience.location = location;
+    if (responsibilities) experience.responsibilities = responsibilities;
 
     const updatedExperience = await experience.save();
     res.json(updatedExperience);
