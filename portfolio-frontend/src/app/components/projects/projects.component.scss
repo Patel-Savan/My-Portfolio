@@ -7,7 +7,8 @@
   h2 {
     font-size: 2rem;
     color: #ffcc00;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    text-align: left;
   }
 
   .loading {
@@ -18,13 +19,18 @@
   }
 
   .projects-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .view-all-button {
+    display: flex;
     background: #ffcc00;
     color: #1a1a1a;
     border: none;
@@ -33,31 +39,27 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-left: 2%;
 
     &:hover {
       background: #e6b800;
-    }
-  }
-
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 1.8rem;
+      transform: scale(1.05);
     }
 
-    .view-all-button {
+    @media (max-width: 768px) {
       font-size: 0.9rem;
       padding: 8px 16px;
     }
-  }
 
-  @media (max-width: 480px) {
-    h2 {
-      font-size: 1.6rem;
-    }
-
-    .view-all-button {
+    @media (max-width: 480px) {
       font-size: 0.8rem;
       padding: 6px 12px;
     }
+  }
+
+  .no-projects {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin-top: 20px;
   }
 }

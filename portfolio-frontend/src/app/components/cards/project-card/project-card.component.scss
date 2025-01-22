@@ -8,7 +8,7 @@
   flex-direction: column;
   gap: 20px;
   width: 90%;
-  max-width: 1000px; 
+  max-width: 1000px;
   margin: auto;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -58,16 +58,9 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 10px;
 
       .tech-stack {
-        h4 {
-          font-size: 1.2rem;
-          color: #ffcc00;
-          margin-bottom: 10px;
-          text-transform: uppercase;
-        }
-
         ul {
           list-style: none;
           padding: 0;
@@ -110,6 +103,44 @@
 
           &::-webkit-scrollbar-track {
             background-color: #333;
+          }
+        }
+      }
+
+      .repo-link {
+        margin-top: 10px;
+        text-align: center;
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          font-size: 0.9rem; /* Reduced font size */
+          color: #1a1a1a;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 8px 16px; /* Reduced padding */
+          background: linear-gradient(45deg, #ffcc00, #ffa500);
+          border: 2px solid #ffcc00;
+          border-radius: 6px; /* Slightly smaller border-radius */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          transition: background 0.3s ease, transform 0.2s ease,
+            box-shadow 0.3s ease;
+
+          &:hover {
+            background: linear-gradient(45deg, #ffa500, #ff9900);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+          }
+
+          &:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          }
+
+          .material-icons {
+            font-size: 1.2rem;
           }
         }
       }

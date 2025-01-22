@@ -1,8 +1,7 @@
 <section id="projects" class="projects-section">
   <h2>My Projects</h2>
   <div *ngIf="loading" class="loading">Loading projects...</div>
-  <div *ngIf="!loading && featuredProjects.length > 0" class="projects-grid"></div>
-  <div class="projects-grid">
+  <div *ngIf="!loading && featuredProjects.length > 0" class="projects-grid">
     <app-project-card
       *ngFor="let project of featuredProjects"
       [title]="project.title"
