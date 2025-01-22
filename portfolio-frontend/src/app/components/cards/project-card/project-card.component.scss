@@ -7,10 +7,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   margin: auto;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  overflow: hidden;
 
   &:hover {
     transform: translateY(-5px);
@@ -30,7 +31,8 @@
   .project-content {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .project-image {
       flex: 0 0 35%;
@@ -116,14 +118,14 @@
           align-items: center;
           justify-content: center;
           gap: 6px;
-          font-size: 0.9rem; /* Reduced font size */
+          font-size: 0.9rem;
           color: #1a1a1a;
           text-decoration: none;
           font-weight: bold;
-          padding: 8px 16px; /* Reduced padding */
+          padding: 8px 16px;
           background: linear-gradient(45deg, #ffcc00, #ffa500);
           border: 2px solid #ffcc00;
-          border-radius: 6px; /* Slightly smaller border-radius */
+          border-radius: 6px;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
           transition: background 0.3s ease, transform 0.2s ease,
             box-shadow 0.3s ease;
