@@ -9,6 +9,7 @@ import { HostListener } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -22,11 +23,12 @@ export class NavbarComponent implements OnInit {
   isMobile: boolean = false;
   menuOpened: boolean = false;
 
-  constructor(private rendered: Renderer2) {
+  constructor(private rendered: Renderer2, private router: Router) {
     this.checkScreenSize();
   }
   ngOnInit(): void {
     this.checkScreenSize();
+
   }
 
   @HostListener('window:resize', ['$event'])
@@ -61,6 +63,16 @@ export class NavbarComponent implements OnInit {
   }
 
   scrollToSection(event: Event, sectionId: string) {
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        this.scrollToElement("home", event);
+      });
+    } else {
+      this.scrollToElement(sectionId, event);
+    }
+  }
+
+  private scrollToElement(sectionId: string, event: Event): void {
     event.preventDefault();
     const element = document.getElementById(sectionId);
     if (element) {

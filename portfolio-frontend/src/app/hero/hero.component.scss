@@ -1,0 +1,47 @@
+.section {
+    width: 100%;
+  }
+  
+  #home {
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  #projects {
+    background-color: #eaeaea;
+  }
+  
+  #skills {
+    background-color: #f4f4f4;
+  }
+  
+  #experience {
+    background-color: #eaeaea;
+  }
+  
+  #contact {
+    background-color: #f4f4f4;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .section {
+      min-height: 100%;
+      scroll-margin-top: 70px;
+    }
+    .content {
+      padding-top: 64px;
+      transition: padding-top 0.3s ease;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .section {
+      min-height: 75%;
+      scroll-margin-top: 50px;
+    }
+  
+    .mobile-content {
+      transition: padding-top 0.3s ease;
+    }
+  }
+  

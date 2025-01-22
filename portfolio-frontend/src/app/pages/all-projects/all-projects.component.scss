@@ -1,0 +1,51 @@
+.all-projects-section {
+  padding: 100px 20px;
+  background: #1a1a1a;
+  color: #f4f4f4;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 30px;
+  }
+
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffcc00;
+    padding: 20px 0;
+  }
+
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .all-projects-section {
+      padding: 100px 20px;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .projects-list {
+      gap: 25px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .all-projects-section {
+      padding: 100px 20px;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    .projects-list {
+      gap: 20px; 
+    }
+  }
+}

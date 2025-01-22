@@ -1,2 +1,21 @@
-<h2>Projects</h2>
-<p>List your projects here.</p>
+<section id="projects" class="projects-section">
+  <h2>My Projects</h2>
+  <div *ngIf="loading" class="loading">Loading projects...</div>
+  <div *ngIf="!loading && featuredProjects.length > 0" class="projects-grid"></div>
+  <div class="projects-grid">
+    <app-project-card
+      *ngFor="let project of featuredProjects"
+      [title]="project.title"
+      [description]="project.description"
+      [image]="'assets/' + project.image"
+      [techStack]="project.techStack"
+      [repoLink]="project.repoLink"
+    ></app-project-card>
+  </div>
+  <button class="view-all-button" routerLink="/all-projects">
+    View All Projects
+  </button>
+  <div *ngIf="!loading && featuredProjects.length === 0" class="no-projects">
+    No projects to display.
+  </div>
+</section>
