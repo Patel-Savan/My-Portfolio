@@ -30,7 +30,7 @@ export class ContactComponent {
     };
 
     emailjs
-      .send(environment.emailJsServiceId, environment.emailJsTemplateId, templateParams, environment.emailJsUserId)
+      .send(environment.API_EMAILJS_SERVICE_ID, environment.API_EMAILJS_TEMPLATE_ID, templateParams, environment.API_EMAILJS_USER_ID)
       .then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);

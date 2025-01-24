@@ -10,7 +10,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  private baseUrl = environment.backend_URL;
+  private baseUrl = environment.API_BASE_URL;
 
   getSkills(): Observable<any> {
     return this.http.get(`${this.baseUrl}/skill`).pipe(
