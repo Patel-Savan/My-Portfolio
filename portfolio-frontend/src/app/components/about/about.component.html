@@ -29,6 +29,10 @@
 
     <div class="skills">
       <h3>My Skills</h3>
+      <div *ngIf="loading" class="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading Skills..</div>
+      </div> 
       <div
         class="skills-category"
         *ngFor="let category of groupedSkills | keyvalue : sortSkills"

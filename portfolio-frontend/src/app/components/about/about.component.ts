@@ -11,6 +11,8 @@ import { EducationComponent } from '../cards/education/education.component';
 })
 export class AboutComponent implements OnInit {
 
+  loading:boolean = true;
+
   timeline = [
     { year: "2019", description: "Started Bachelors at GTU" },
     { year: "2020", description: "Began competitive coding on platforms like HackerRank" },
@@ -60,10 +62,11 @@ export class AboutComponent implements OnInit {
       (data) => {
         this.groupedSkills = data;
         console.log(data);
-        
+        this.loading = false;
       },
       (error) => {
-        console.log('Error Fetching Skills', error);
+        console.log(error);
+        this.loading = false;
       }
     )
   }
