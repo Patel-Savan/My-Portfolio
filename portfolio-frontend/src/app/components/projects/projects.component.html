@@ -1,6 +1,9 @@
 <section id="projects" class="projects-section">
   <h2>Projects</h2>
-  <div *ngIf="loading" class="loading">Loading projects...</div>
+  <div *ngIf="loading" class="loading">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading Projects..</div>
+  </div>  
   <div *ngIf="!loading && featuredProjects.length > 0" class="projects-grid">
     <app-project-card
       *ngFor="let project of featuredProjects"
@@ -14,7 +17,4 @@
   <button class="view-all-button" routerLink="/all-projects">
     View All Projects
   </button>
-  <div *ngIf="!loading && featuredProjects.length === 0" class="no-projects">
-    No projects to display.
-  </div>
 </section>

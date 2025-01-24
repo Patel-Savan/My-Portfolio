@@ -1,7 +1,10 @@
 <section id="all-projects" class="all-projects-section">
 
   <h2>My Projects</h2>
-  <div *ngIf="loading" class="loading">Loading projects...</div>
+  <div *ngIf="loading" class="loading">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading Projects..</div>
+  </div>  
   <div
     *ngIf="!loading && projects.length > 0"
     class="projects-list"
