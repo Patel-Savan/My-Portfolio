@@ -20,7 +20,6 @@ export class AllProjectsComponent {
     this.apiService.getProjects().subscribe(
         (data) => {
           this.projects = data;
-          console.log(data);
           this.loading = false;
         },
         (error) => {

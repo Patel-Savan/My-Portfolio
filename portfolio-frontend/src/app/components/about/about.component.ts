@@ -61,7 +61,6 @@ export class AboutComponent implements OnInit {
     this.apiService.getSkills().subscribe(
       (data) => {
         this.groupedSkills = data;
-        console.log(data);
         this.loading = false;
       },
       (error) => {

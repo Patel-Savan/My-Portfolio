@@ -21,7 +21,6 @@ export class ProjectsComponent {
     this.apiService.getProjects().subscribe(
         (data) => {
           this.featuredProjects = data.slice(0, 2);
-          console.log(data);
           this.loading = false;
         },
         (error) => {

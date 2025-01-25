@@ -19,7 +19,6 @@ export class ExperienceComponent {
     this.apiService.getExperiences().subscribe(
       (data) => {
         this.experiences = data;
-        console.log(data);
         this.loading = false;
       },
       (error) => {
