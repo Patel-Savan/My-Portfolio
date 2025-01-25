@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "build:netlify": "npm run update-env && ng build --configuration production",
     "update-env": "node update-runtime-env.js",
     "start:local": "npm run update-env && ng serve"
   },
