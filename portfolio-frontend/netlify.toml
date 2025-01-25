@@ -1,6 +1,6 @@
 [build]
   command = "npm run build:netlify"
-  publish = "dist/portfolio-frontend"
+  publish = "dist/portfolio-frontend/browser"
 
 [[redirects]]
   from = "/*"
