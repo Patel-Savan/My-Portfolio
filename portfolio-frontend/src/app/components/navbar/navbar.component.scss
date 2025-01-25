@@ -61,7 +61,7 @@ nav {
 
 .mobile-menu {
   display: none; 
-  top: 20%; 
+  top: 10%; 
   left: 0;
   width: 100%;
   background-color: #333;
@@ -99,7 +99,8 @@ nav {
     display: none;
   }
   .mobile-menu.open {
-    padding-top: 20%;
+    // padding-top: 20%;
     display: block;
+    position: fixed;
   }
 }

@@ -19,9 +19,9 @@
       <div class="timeline">
         <h3>Timeline</h3>
         <div class="timeline-event" *ngFor="let event of timeline">
-          <div class="timeline-dot"></div>
+          <!-- <div class="timeline-dot"></div> -->
           <div class="timeline-description">
-            <strong>{{ event.year }}</strong>: {{ event.description }}
+            <span>{{ event.year }} : </span> {{ event.description }}
           </div>
         </div>
       </div>

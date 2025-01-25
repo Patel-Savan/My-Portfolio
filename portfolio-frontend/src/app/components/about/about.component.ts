@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
   loading:boolean = true;
 
   timeline = [
-    { year: "2019", description: "Started Bachelors at GTU" },
+    { year: "2019", description: "Started Bachelors at Gujarat Technological University" },
     { year: "2020", description: "Began competitive coding on platforms like HackerRank" },
     { year: "2021", description: "Built first React.js and Node.js web app" },
     { year: "2022", description: "Interned at TatvaSoft Pvt. Ltd." },

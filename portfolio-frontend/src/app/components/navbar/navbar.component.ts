@@ -63,6 +63,9 @@ export class NavbarComponent implements OnInit {
   }
 
   scrollToSection(event: Event, sectionId: string) {
+    if(this.isMobile){
+      this.toggleMenu();
+    }
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
         this.scrollToElement("home", event);
