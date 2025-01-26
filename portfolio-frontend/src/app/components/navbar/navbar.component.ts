@@ -59,7 +59,7 @@ export class NavbarComponent implements OnInit {
         event.preventDefault();
         setTimeout(() => {
           this.scrollToElement(sectionId, event);
-        }, 100);
+        }, 500);
       });
     } else {
       this.scrollToElement(sectionId, event);
