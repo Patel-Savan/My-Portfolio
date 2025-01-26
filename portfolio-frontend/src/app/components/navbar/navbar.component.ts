@@ -26,16 +26,16 @@ export class NavbarComponent implements OnInit {
   constructor(private rendered: Renderer2, private router: Router) {
     this.checkScreenSize();
   }
+
   ngOnInit(): void {
     this.checkScreenSize();
-
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.checkScreenSize();
-    this.toggleClass();
   }
+
   @HostBinding('class.menu-open') menuOpenClass = false;
 
   checkScreenSize() {
@@ -48,27 +48,15 @@ export class NavbarComponent implements OnInit {
   toggleMenu() {
     this.menuOpened = !this.menuOpened;
     this.menuOpenClass = this.menuOpened;
-
-    this.toggleClass();
-  }
-
-  toggleClass(){
-    const contentDiv = document.querySelector('#main-content');
-
-    if (this.menuOpened) {
-      this.rendered.removeClass(contentDiv, 'mobile-content');
-    } else {
-      this.rendered.addClass(contentDiv, 'mobile-content');
-    }
   }
 
   scrollToSection(event: Event, sectionId: string) {
-    if(this.isMobile){
+    if (this.isMobile) {
       this.toggleMenu();
     }
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
-        this.scrollToElement("home", event);
+        this.scrollToElement('home', event);
       });
     } else {
       this.scrollToElement(sectionId, event);
