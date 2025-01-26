@@ -37,7 +37,8 @@
       input,
       textarea {
         width: 100%;
-        padding: 10px;
+        padding: 10px 0px 10px 10px;
+        margin: auto;
         resize: none;
         border: none;
         border-radius: 5px;
@@ -77,6 +78,7 @@
 
     button {
       display: block;
+      margin: auto;
       width: 100%;
       padding: 10px;
       font-size: 1.2rem;
@@ -177,7 +179,7 @@
         input,
         textarea {
           font-size: 1.2rem;
-          padding: 8px;
+          padding: 8px 0px 8px 8px;
         }
       }
 
@@ -218,7 +220,7 @@
         input,
         textarea {
           font-size: 1.2rem;
-          padding: 6px;
+          padding: 6px 6px 6px 6px;
         }
       }
 

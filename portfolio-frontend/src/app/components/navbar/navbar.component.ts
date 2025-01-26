@@ -56,7 +56,10 @@ export class NavbarComponent implements OnInit {
     }
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
-        this.scrollToElement('home', event);
+        event.preventDefault();
+        setTimeout(() => {
+          this.scrollToElement(sectionId, event);
+        }, 100);
       });
     } else {
       this.scrollToElement(sectionId, event);
