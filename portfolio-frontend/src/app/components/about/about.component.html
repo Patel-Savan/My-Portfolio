@@ -2,13 +2,13 @@
   <div class="about-content">
     <h2>About Me</h2>
     <div class="content-wrapper">
-
       <div class="summary-box">
         <h3>Summary</h3>
         <p>
-          Hello, My name is Savan Patel, a Master's student in Applied Computer Science
-          at Dalhousie University with a Bachelor's in Computer Engineering. I
-          have hands-on experience in frameworks like React, Node.js, and Spring
+          I am currently pursuing a Master of Applied Computer Science at
+          Dalhousie University, Halifax, Canada. I hold a Bachelor’s degree in
+          Computer Engineering from Gujarat Technological University.. I have
+          hands-on experience in frameworks like React, Node.js, and Spring
           Boot, coupled with expertise in cloud technologies such as AWS.
           Through internships and academic projects, I have developed a passion
           for building innovative solutions and adapting to new technologies.
@@ -19,7 +19,6 @@
       <div class="timeline">
         <h3>Timeline</h3>
         <div class="timeline-event" *ngFor="let event of timeline">
-          <!-- <div class="timeline-dot"></div> -->
           <div class="timeline-description">
             <span>{{ event.year }} : </span> {{ event.description }}
           </div>
@@ -32,7 +31,7 @@
       <div *ngIf="loading" class="loading">
         <div class="spinner"></div>
         <div class="loading-text">Loading Skills..</div>
-      </div> 
+      </div>
       <div
         class="skills-category"
         *ngFor="let category of groupedSkills | keyvalue : sortSkills"

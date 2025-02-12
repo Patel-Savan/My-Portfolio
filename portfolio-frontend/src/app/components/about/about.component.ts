@@ -14,15 +14,15 @@ export class AboutComponent implements OnInit {
   loading:boolean = true;
 
   timeline = [
-    { year: "2019", description: "Started Bachelors at Gujarat Technological University" },
-    { year: "2020", description: "Began competitive coding on platforms like HackerRank" },
-    { year: "2021", description: "Built first React.js and Node.js web app" },
-    { year: "2022", description: "Interned at TatvaSoft Pvt. Ltd." },
-    { year: "2023", description: "Interned as Web Developer at Tech Elecon Pvt. Ltd." },
-    { year: "2023", description: "Graduated with Bachelor's in Computer Engineering" },
-    { year: "2023", description: "Interned as Full Stack Developer at BrainyBeam Technologies" },
-    { year: "2024", description: "Moved to Halifax for Master's at Dalhousie University" },
-  ];
+    { year: "2024", description: "Moved to Halifax to pursue a Master's at Dalhousie University." },
+    { year: "2023", description: "Worked as a Full Stack Developer Intern at BrainyBeam Technologies." },
+    { year: "2023", description: "Graduated with a Bachelor's degree in Computer Engineering from Gujarat Technological University." },
+    { year: "2023", description: "Interned as a Web Developer at Tech Elecon Pvt. Ltd., contributing to frontend development." },
+    { year: "2022", description: "Completed a Web Development Internship at TatvaSoft Pvt. Ltd." },
+    { year: "2021", description: "Developed my first full-stack web application using React.js and Node.js." },
+    { year: "2020", description: "Started competitive coding on platforms like HackerRank." },
+    { year: "2019", description: "Began my Bachelor's in Computer Engineering at Gujarat Technological University." },
+];
   
   educationList = [
     {
